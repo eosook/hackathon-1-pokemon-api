@@ -31,7 +31,7 @@ body {
   display: flex;
 }
 .header__container {
-  background: url("../images/pokemon-logo-275-16780.png");
+  background: url("../images/pokemon_hub-banner.avif");
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -53,8 +53,14 @@ body {
   font-family: "dino";
 }
 
+.main {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
 .main__wrapper {
   position: relative;
+  border: 10px solid white;
 }
 .main__wrapper-btn {
   position: absolute;
@@ -92,7 +98,6 @@ body {
   text-align: right;
 }
 .main__container-img {
-  border: 1px solid black;
   width: 400px;
   height: 300px;
   border-radius: 4px;
@@ -120,8 +125,8 @@ body {
 .main__input {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   width: 40%;
 }
 .main__input-text {
@@ -130,7 +135,6 @@ body {
 }
 .main__input-guess {
   padding: 10px;
-  border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 16px;
 }
@@ -138,4 +142,24 @@ body {
   outline: none;
   border-color: #007bff;
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+.main__input-btn {
+  width: 180px;
+  height: 50px;
+  background-color: #161886;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 25px;
+  font-family: "dino";
+}
+.main__input-btn:hover {
+  background-color: #2980b9;
+}
+.main__input-btn:hover:active {
+  background-color: #2980b9;
+  transform: translateY(2px);
 }/*# sourceMappingURL=styles.css.map */

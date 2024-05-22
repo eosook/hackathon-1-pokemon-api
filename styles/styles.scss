@@ -6,7 +6,7 @@ body {
 .header {
   display: flex;
   &__container {
-    background: url("../images/pokemon-logo-275-16780.png");
+    background: url("../images/pokemon_hub-banner.avif");
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -29,9 +29,13 @@ body {
   }
 }
 .main {
+  // background: url("../images/pikachu_wallpaper_by_archivist13_dd9809d-fullview.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
   &__wrapper {
     position: relative;
-
+    border: 10px solid white;
     &-btn {
       position: absolute;
       top: 30vh;
@@ -70,7 +74,6 @@ body {
       text-align: right;
     }
     &-img {
-      border: 1px solid black;
       width: 400px;
       height: 300px;
       border-radius: 4px;
@@ -99,8 +102,8 @@ body {
   &__input {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     width: 40%;
     &-text {
       font-family: $font;
@@ -108,13 +111,32 @@ body {
     }
     &-guess {
       padding: 10px;
-      border: 1px solid #ccc;
       border-radius: 5px;
       font-size: 16px;
       &:focus {
         outline: none;
         border-color: #007bff;
         box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+      }
+    }
+    &-btn {
+      width: 180px;
+      height: 50px;
+      background-color: #161886;
+      border: none;
+      color: white;
+      font-size: 1rem;
+      margin: 4px 2px;
+      transition-duration: 0.4s;
+      cursor: pointer;
+      border-radius: 25px;
+      font-family: $font;
+      &:hover {
+        background-color: #2980b9;
+        &:active {
+          background-color: #2980b9;
+          transform: translateY(2px);
+        }
       }
     }
   }
