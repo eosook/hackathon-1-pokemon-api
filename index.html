@@ -8,30 +8,43 @@
     <title>Pokemon</title>
   </head>
   <body>
-    <header>
-      <section>
-        <div>
-          <img src="" alt="Pokemon images" />
-        </div>
-        <nav>
-          <ul>
-            <a href=""><li>home</li></a>
-            <a href=""> <li>grass type</li></a>
-            <a href=""><li>fire type</li></a>
+    <header class="header">
+      <section class="header__container">
+        <nav class="nav">
+          <ul class="nav__list">
+            <a class="nav__list-link" href=""
+              ><li class="nav__list-item">Home</li></a
+            >
+            <a class="nav__list-link" href="">
+              <li class="nav__list-item">Collections</li></a
+            >
+            <a class="nav__list-link" href=""
+              ><li class="nav__list-item">Storages</li></a
+            >
           </ul>
         </nav>
       </section>
     </header>
-    <main>
-      <section>
-        <div>
-          <h1>Pokemons</h1>
+    <main class="main">
+      <section class="main__containers">
+        <div class="main__container">
+          <h1 class="'main__container-header">Pokemons</h1>
+        </div>
+        <div class="main__container-image">
+          <div class="main__container-img">Image here</div>
+          <button class="main__container-btn">Click me</button>
         </div>
       </section>
-      <section>
-        <div></div>
-        <div></div>
-      </section>
+
+      <div class="main__input">
+        <label class="main__input-text" for="text">Pokemon Name</label>
+        <input
+          type="text"
+          name="name"
+          placeholder="Guess The Pokemon"
+          class="main__input-guess"
+        />
+      </div>
     </main>
   </body>
 </html>
