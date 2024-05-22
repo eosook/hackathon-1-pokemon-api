@@ -29,8 +29,28 @@ body {
   }
 }
 .main {
-  display: flex;
-  height: 70vh;
+  &__wrapper {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &-btn {
+      background-color: #007bff;
+      border: none;
+      color: white;
+      font-family: $font;
+      padding: 15px 32px;
+      cursor: pointer;
+      font-size: 1rem;
+      border-radius: 25px;
+      width: 300px;
+      height: 50px;
+    }
+  }
+
+  &__display {
+    display: none;
+  }
   &__containers {
     width: 50%;
     display: flex;
