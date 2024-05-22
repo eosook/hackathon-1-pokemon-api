@@ -54,12 +54,12 @@ body {
 }
 
 .main__wrapper {
-  height: 50vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
 }
 .main__wrapper-btn {
+  position: absolute;
+  top: 30vh;
+  left: 37%;
   background-color: #007bff;
   border: none;
   color: white;
