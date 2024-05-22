@@ -1,1 +1,143 @@
-@import "./partials/_reset";
+@use "./partials/_reset" as *;
+@use "./partials/_variables" as *;
+body {
+  margin: 0;
+}
+.header {
+  display: flex;
+  &__container {
+    background: url("../images/pokemon_hub-banner.avif");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 30vh;
+    z-index: 0;
+  }
+}
+.nav {
+  width: 40%;
+  position: absolute;
+  right: 5px;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    &-item {
+      font-size: 1.5rem;
+      font-family: $font;
+    }
+  }
+}
+.main {
+  // background: url("../images/pikachu_wallpaper_by_archivist13_dd9809d-fullview.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  &__wrapper {
+    position: relative;
+    border: 10px solid white;
+    &-btn {
+      position: absolute;
+      top: 30vh;
+      left: 37%;
+      background-color: #007bff;
+      border: none;
+      color: white;
+      font-family: $font;
+      padding: 15px 32px;
+      cursor: pointer;
+      font-size: 1rem;
+      border-radius: 25px;
+      width: 300px;
+      height: 50px;
+    }
+  }
+
+  &__display {
+    display: none;
+  }
+  &__containers {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__container {
+    font-family: $font;
+    width: 30%;
+    text-align: center;
+    font-size: 2rem;
+
+    &-image {
+      margin-bottom: 3rem;
+      text-align: right;
+    }
+    &-img {
+      width: 400px;
+      height: 300px;
+      border-radius: 4px;
+    }
+    &-btn {
+      width: 180px;
+      height: 50px;
+      background-color: #161886;
+      border: none;
+      color: white;
+      font-size: 1rem;
+      margin: 4px 2px;
+      transition-duration: 0.4s;
+      cursor: pointer;
+      border-radius: 25px;
+      font-family: $font;
+      &:hover {
+        background-color: #2980b9;
+        &:active {
+          background-color: #2980b9;
+          transform: translateY(2px);
+        }
+      }
+    }
+  }
+  &__input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    &-text {
+      font-family: $font;
+      font-size: 2rem;
+    }
+    &-guess {
+      padding: 10px;
+      border-radius: 5px;
+      font-size: 16px;
+      &:focus {
+        outline: none;
+        border-color: #007bff;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+      }
+    }
+    &-btn {
+      width: 180px;
+      height: 50px;
+      background-color: #161886;
+      border: none;
+      color: white;
+      font-size: 1rem;
+      margin: 4px 2px;
+      transition-duration: 0.4s;
+      cursor: pointer;
+      border-radius: 25px;
+      font-family: $font;
+      &:hover {
+        background-color: #2980b9;
+        &:active {
+          background-color: #2980b9;
+          transform: translateY(2px);
+        }
+      }
+    }
+  }
+}

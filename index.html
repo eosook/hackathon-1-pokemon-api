@@ -4,39 +4,57 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/styles.css" />
-    <script src="./scripts/index.js" defer></script>
+    <script src="./script/index.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
     <title>Pokemon</title>
   </head>
   <body>
-    <header>
-      <section>
-        <div>
-          <img  class="pokemon-image" src="" alt="Pokemon images" />
-        </div>
-        <nav>
-          <ul>
-            <a href=""><li>home</li></a>
-            <a href=""> <li>grass type</li></a>
-            <a href=""><li>fire type</li></a>
+    <header class="header">
+      <section class="header__container">
+        <nav class="nav">
+          <ul class="nav__list">
+            <a class="nav__list-link" href=""
+              ><li class="nav__list-item">Home</li></a
+            >
+            <a class="nav__list-link" href="">
+              <li class="nav__list-item">Collections</li></a
+            >
+            <a class="nav__list-link" href=""
+              ><li class="nav__list-item">Storages</li></a
+            >
           </ul>
         </nav>
       </section>
     </header>
-    <main>
-      <section>
-        <div>
-          <h1>Pokemons</h1>
-        </div>
-      </section>
-      <section>
-        <div></div>
-        <div class="pokemon-name"></div>
-        <form class="form">
-            <input type="text" class="form__name" name="guess">
-            <button type="submit" class="submit">Submit</button>
+    <main class="main">
+      <div class="main__wrapper">
+        <button class="main__wrapper-btn">Start</button>
+      </div>
+
+      <div class="main__display">
+        <section class="main__containers">
+          <div class="main__container">
+            <h1 class="'main__container-header">Pokemons</h1>
+          </div>
+          <div class="main__container-image">
+            <img class="main__container-img" src="">
+            <button class="main__container-btn">Click me</button>
+          </div>
+        </section>
+        <form class="main__input">
+          <label class="main__input-text" for="text">Pokemon Name</label>
+          <input
+            type="text"
+            name="name"
+            placeholder="Guess The Pokemon"
+            class="main__input-guess"
+          />
+          <div class="main__input-result">Take a guess!</div>
+          <button type="submit" class="main__input-btn">Submit</button>
+          <div class="points">Score: 0</div>
         </form>
-      </section>
+      </div>
     </main>
+    <footer></footer>
   </body>
 </html>
