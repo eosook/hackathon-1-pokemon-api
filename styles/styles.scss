@@ -5,7 +5,6 @@ body {
 }
 .header {
   display: flex;
-  border: 1px solid black;
   &__container {
     background: url("../images/pokemon-logo-275-16780.png");
     background-size: cover;
@@ -31,7 +30,6 @@ body {
 }
 .main {
   display: flex;
-  border: 1px solid black;
   height: 70vh;
   &__containers {
     width: 50%;
@@ -48,6 +46,7 @@ body {
 
     &-image {
       margin-bottom: 3rem;
+      text-align: right;
     }
     &-img {
       border: 1px solid black;
@@ -58,9 +57,44 @@ body {
     &-btn {
       width: 180px;
       height: 50px;
-      border-radius: 4px;
+      background-color: #161886;
       border: none;
-      background-color: bisque;
+      color: white;
+      font-size: 1rem;
+      margin: 4px 2px;
+      transition-duration: 0.4s;
+      cursor: pointer;
+      border-radius: 25px;
+      font-family: $font;
+      &:hover {
+        background-color: #2980b9;
+        &:active {
+          background-color: #2980b9;
+          transform: translateY(2px);
+        }
+      }
+    }
+  }
+  &__input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    &-text {
+      font-family: $font;
+      font-size: 2rem;
+    }
+    &-guess {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+      &:focus {
+        outline: none;
+        border-color: #007bff;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+      }
     }
   }
 }
