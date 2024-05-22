@@ -1,17 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <script src="./scripts/index.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
-    <script src="./script.js" defer></script>
-    <title>Document</title>
-</head>
-<body>
-    <div class="pokemon-name"></div>
-    <form class="poke-form">
-        <input class="form-name" name="guess">
-        <button class="submit" type="input">Submit</button>
-    </form>
-</body>
+    <title>Pokemon</title>
+  </head>
+  <body>
+    <header>
+      <section>
+        <div>
+          <img  class="pokemon-image" src="" alt="Pokemon images" />
+        </div>
+        <nav>
+          <ul>
+            <a href=""><li>home</li></a>
+            <a href=""> <li>grass type</li></a>
+            <a href=""><li>fire type</li></a>
+          </ul>
+        </nav>
+      </section>
+    </header>
+    <main>
+      <section>
+        <div>
+          <h1>Pokemons</h1>
+        </div>
+      </section>
+      <section>
+        <div></div>
+        <div class="pokemon-name"></div>
+        <form class="form">
+            <input type="text" class="form__name" name="guess">
+            <button type="submit" class="submit">Submit</button>
+        </form>
+      </section>
+    </main>
+  </body>
 </html>

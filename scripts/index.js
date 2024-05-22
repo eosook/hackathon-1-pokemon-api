@@ -3,16 +3,10 @@ const kantoRegionUrl = "https://pokeapi.co/api/v2/pokedex/2/";
 const pokemonFormUrl = "https://pokeapi.co/api/v2/pokemon-form/";
 
 const pokemonNameDiv = document.querySelector(".pokemon-name");
+const pokemonImageDiv = document.querySelector(".pokemon-image")
 
 const pokemonSubmit = document.querySelector(".submit");
-const pokeForm = document.querySelector(".poke-form");
-
-// async function fetch(){
-//     const pokedexKanto = await axios.get(kantoRegionUrl);
-//     console.log(pokedexKanto.data.pokemon_entries[0].pokemon_species.name);
-// }
-
-// fetch();
+const pokeForm = document.querySelector(".form");
 
 function randomPokedexEntry(){
     return (Math.floor(Math.random() * 151));
@@ -25,16 +19,18 @@ async function getRandomPokemon(){
     return pokemonName;
 }
 
-async function getPokemonSprite(){
-    const pokeName = await getRandomPokemon();
-    const pokemonSprite = await axios.get(pokemonFormUrl + pokeName);
-    console.log(pokemonSprite.data.sprites.front_default);
-    return pokeName;
+async function getPokemonSprite(pokemonName){
+    const pokemonSpriteUrl = await axios.get(pokemonFormUrl + pokemonName);
+    const pokemonSprite = pokemonSpriteUrl.data.sprites.front_default;
+    return pokemonSprite;
 }
 
-async function storeName(){
-    const pokeName = await getPokemonSprite();
-    pokemonNameDiv.innerText = pokeName;
+async function start(){
+    const pokeName = await getRandomPokemon();
+    const spriteUrl = await getPokemonSprite(pokeName);
+    let guessCount = 3;
+    console.log(spriteUrl);
+    pokemonImageDiv.src = spriteUrl;
     console.log(pokeName);
 
     pokeForm.addEventListener("submit", (e) => {
@@ -45,8 +41,19 @@ async function storeName(){
             console.log("Woohoo!");
         } else {
             console.log("NOPE");
+            guessCount--;
+            console.log(guessCount);
+        }
+
+        if (guessCount === 0){
+            reset();
         }
     })
 }
 
-storeName();
+start();
+
+function reset(){
+    let guessCount = 3;
+    start();
+}
